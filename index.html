@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>bard vision【バードビジョン】 大阪の動画制作事務所</title>
+<meta name="description" content="バードビジョンは大阪の少数運営の映像制作オフィスです。企業プロモーション映像、SNS動画、WebCM、インタビュー映像、モーショングラフィックスの制作と、Premiere Pro・After Effectsの映像編集レッスン・スクールを行っています。">
+<meta property="og:title" content="bard vision【バードビジョン】 大阪の動画制作事務所">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/hero-poster.webp">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --blue: #2ca6e0;
+    --bg: #f7f6f5;
+    --text: #333;
+    --black: #000;
+    --header-h: 65px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+body, h1, h2, h3, p, ul, li, figure, table, th, td { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none; }
+img, video { display: block; max-width: 100%; height: auto; }
+body {
+    font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "Yu Gothic Medium", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-size: 18px;
+    color: var(--text);
+    background: var(--bg);
+    text-align: justify;
+    -webkit-font-smoothing: antialiased;
+}
+p { line-height: 1.8; }
+.inner { width: 1000px; max-width: calc(100% - 32px); margin: 0 auto; }
+
+/* ---------- Header ---------- */
+header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+    height: var(--header-h);
+    background: var(--black);
+    border-bottom: 1px solid #fff;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.logo { width: 200px; margin-left: 25px; }
+.logo img { width: 200px; }
+#gnav { display: flex; }
+#gnav a {
+    position: relative; z-index: 0; display: block;
+    padding: 0 20px; line-height: 50px;
+    font-size: 15px; color: #fff;
+}
+#gnav a::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: var(--blue); transform: scale(0); transition: transform .3s ease-out;
+}
+#gnav a:hover::before, #gnav a:focus-visible::before { transform: scale(1); }
+.toggle { display: none; }
+
+/* ---------- Section heading ---------- */
+.sec-title {
+    font-size: 34px; font-weight: 400;
+    padding: 0 0 15px 50px; margin-bottom: 40px;
+    background: url("images/h-black.svg") no-repeat left 10px;
+    border-bottom: 2px solid #000; color: #000;
+}
+.dark .sec-title {
+    background-image: url("images/h-white.svg");
+    border-bottom-color: #fff; color: #fff;
+}
+
+/* ---------- Hero ---------- */
+#eyecatch { position: relative; margin-top: var(--header-h); aspect-ratio: 16 / 9; overflow: hidden; background: #000; }
+#eyecatch video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#eyecatch .amikake {
+    position: absolute; inset: 0; z-index: 1;
+    background: url("images/scanline.png") repeat;
+    display: flex; align-items: center; justify-content: center;
+}
+#eyecatch .copy { width: 40%; filter: drop-shadow(2px 2px 2px rgba(0,0,0,.8)); }
+
+/* ---------- About ---------- */
+#area1 { padding: 100px 0 120px; }
+#area1 .cols { display: flex; gap: 5%; }
+#area1 figure { width: 45%; padding-top: 50px; flex: none; }
+#area1 .text { width: 50%; }
+#area1 .text p + p { padding-top: 40px; }
+
+/* ---------- Dark sections ---------- */
+.dark { background: var(--black); color: #fff; }
+.area2 { padding: 80px 0 100px; }
+.youtube { display: flex; flex-wrap: wrap; margin: 0 -1%; }
+.youtube li { width: 31%; margin: 50px 1% 0; }
+.yt {
+    position: relative; aspect-ratio: 16 / 9; overflow: hidden;
+    border: 1px solid #333; background: #111; cursor: pointer;
+}
+.yt img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+.yt:hover img { opacity: .8; }
+.yt::after {
+    content: ""; position: absolute; left: 50%; top: 50%;
+    width: 64px; height: 44px; margin: -22px 0 0 -32px; border-radius: 12px;
+    background: rgba(0,0,0,.7) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23fff'/%3E%3C/svg%3E") no-repeat center / 28px;
+    transition: background-color .2s;
+}
+.yt:hover::after { background-color: #f00; }
+.yt.playing::after { display: none; }
+.yt iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.youtube figcaption {
+    font-size: 14px; background: #fff;
+    padding: 12px 8px 8px; border-top: 1px solid #ccc;
+    display: flex; flex-direction: column;
+}
+.youtube figcaption span { color: var(--text); font-weight: 700; line-height: 1.5; }
+.youtube figcaption a {
+    align-self: flex-end;
+    background: var(--blue); color: #fff;
+    padding: 0 10px; margin: 8px 0; border-radius: 4px; line-height: 1.6;
+    transition: opacity .2s;
+}
+.youtube figcaption a:hover { opacity: .6; }
+
+/* ---------- Lesson & School ---------- */
+#area3 { padding: 100px 0 0; }
+#area3 .desc figure {
+    margin: 40px 0; padding: 30px 0;
+    background: #fff; border: 1px solid #eee;
+}
+#area3 .desc figure img { margin: 0 auto; }
+.danraku { padding-top: 40px; }
+.sem { display: flex; justify-content: space-between; padding-top: 40px; }
+.sem figure { width: 55%; }
+.sem ul { width: 42%; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
+.btn-list li, .reel_btn {
+    background: #fff; border: 1px solid #eee; border-left: 10px solid var(--blue);
+    font-size: 20px; line-height: 58px;
+}
+.btn-list a, .reel_btn a {
+    position: relative; z-index: 0; display: block;
+    color: var(--text); text-align: center;
+    background: url("images/arrow-blue.svg") no-repeat right 20px center;
+    transition: color .5s;
+}
+.btn-list a::before, .reel_btn a::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: var(--blue); transform: scaleX(0); transform-origin: 0 50%;
+    transition: transform .5s ease-out;
+}
+.btn-list a:hover, .reel_btn a:hover { color: #fff; }
+.btn-list a:hover::before, .reel_btn a:hover::before {
+    transform: scaleX(1);
+    transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
+}
+.sem2 { margin-top: 100px; }
+.reel { padding: 40px 0 100px; }
+.reel_btn { margin-top: 40px; }
+
+/* ---------- Price ---------- */
+#area4 { padding: 100px 0; }
+.price table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.price th, .price td { border: 1px solid #ccc; text-align: center; background: #fff; padding: 20px 4px; }
+.price th { background: #000; color: #fff; font-weight: 400; }
+.price tr:first-child th:nth-child(2) { background: #f8f8f8; color: var(--text); }
+.price tr:first-child th:nth-child(3) { background: var(--blue); }
+.price td:nth-child(3) { background: #f9fdff; }
+.price td:nth-child(4) { background: #f8f8f8; }
+.price td[colspan] { background: #fff; }
+.price td span { display: inline-block; }
+.price ul { margin-top: 20px; }
+.table-wrap { overflow-x: auto; }
+
+/* ---------- Book / Profile / Contact ---------- */
+#area5 { padding: 80px 0; }
+.book {
+    display: grid;
+    grid-template-columns: 75% 7% 15% 3%;
+    grid-template-areas: "txt . img ." "btn . img .";
+    padding-bottom: 4em;
+}
+.book p { grid-area: txt; }
+.book img { grid-area: img; width: 100%; }
+.book a {
+    grid-area: btn; justify-self: end; align-self: end;
+    color: #fff; background: var(--blue);
+    padding: .7em 3em; border-radius: 4px; transition: opacity .2s;
+}
+.book a:hover { opacity: .8; }
+.profile { display: flex; align-items: center; gap: 60px; }
+.profile .face { width: 250px; flex: none; margin-left: 30px; border-radius: 50%; }
+.profile ul li {
+    margin-bottom: 20px; padding-left: 20px; line-height: 1.6;
+    background: url("images/arrow-white.svg") no-repeat left center;
+}
+.profile ul li.badges { background: none; display: flex; align-items: center; gap: 30px; }
+.profile .badges img { height: 60px; width: auto; }
+.profile .badges a:hover { opacity: .8; }
+.contact-text { font-size: 16px; margin-top: 40px; }
+.contact-btn-wrap { text-align: center; margin-top: 48px; }
+.contact-btn {
+    display: inline-block; min-width: 320px;
+    padding: 18px 40px; border: 1px solid #fff;
+    color: #fff; background: #000; font-size: 17px; letter-spacing: .08em;
+    transition: background-color .2s;
+}
+.contact-btn:hover { background: var(--blue); }
+
+/* ---------- Footer ---------- */
+footer {
+    width: 1000px; max-width: calc(100% - 32px); height: 80px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+}
+footer small { font-size: 16px; }
+footer ul { display: flex; gap: 20px; }
+footer ul li { width: 40px; }
+footer ul a:hover { opacity: .7; }
+.go_top {
+    position: fixed; right: 10px; bottom: 10%; z-index: 50;
+    width: 50px; height: 50px;
+    opacity: 0; pointer-events: none; transition: opacity .3s;
+}
+.go_top.show { opacity: 1; pointer-events: auto; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 812px) {
+    :root { --header-h: 50px; }
+    body { font-size: 16px; text-align: left; }
+    .logo { width: 160px; margin-left: 4%; }
+    .logo img { width: 160px; }
+    .toggle {
+        display: block; width: 36px; height: 36px; margin-right: 4%;
+        background: none; border: 0; padding: 0; cursor: pointer; position: relative;
+    }
+    .toggle span, .toggle span::before, .toggle span::after {
+        position: absolute; left: 4px; width: 28px; height: 2px; background: #fff;
+        transition: transform .3s, background-color .3s;
+    }
+    .toggle span { top: 17px; }
+    .toggle span::before, .toggle span::after { content: ""; left: 0; }
+    .toggle span::before { top: -9px; }
+    .toggle span::after { top: 9px; }
+    .nav-open .toggle span { background: transparent; }
+    .nav-open .toggle span::before { transform: translateY(9px) rotate(45deg); }
+    .nav-open .toggle span::after { transform: translateY(-9px) rotate(-45deg); }
+    #gnav {
+        display: none; position: absolute; top: var(--header-h); left: 0; right: 0;
+        flex-direction: column;
+    }
+    .nav-open #gnav { display: flex; }
+    #gnav li { background: #333; border-top: 1px solid #ccc; text-align: center; }
+    #gnav a { font-size: 16px; line-height: 46px; }
+
+    .sec-title { font-size: 22px; line-height: 1.5; padding: 0 0 15px 40px; background-size: 30px auto; background-position: left 4px; }
+    #eyecatch .copy { width: 70%; }
+
+    .inner, footer { width: 96%; max-width: none; }
+    #area1 { padding: 40px 0; }
+    #area1 .cols { flex-direction: column; }
+    #area1 figure, #area1 .text { width: 100%; }
+    #area1 figure { padding-top: 0; margin-bottom: 30px; }
+    #area1 .text p + p { padding-top: 30px; }
+
+    .area2 { padding: 40px 0 60px; }
+    .youtube { margin: 0; }
+    .youtube li { width: 100%; margin: 20px 0 0; }
+
+    #area3 { padding: 40px 0; }
+    #area3 .desc figure { padding: 16px; margin: 10px 0 20px; }
+    .danraku { padding-top: 30px; }
+    .sem { flex-direction: column; padding-top: 10px; }
+    .sem figure, .sem ul { width: 100%; }
+    .sem figure { margin-bottom: 10px; }
+    .sem ul { gap: 10px; }
+    .btn-list li, .reel_btn { font-size: 16px; line-height: 48px; }
+    .btn-list a, .reel_btn a { background-position: 97% center; }
+    .sem2 { margin-top: 70px; }
+    .reel { padding: 20px 0 40px; }
+    .reel_btn { margin-top: 20px; }
+
+    #area4 { padding: 40px 0; }
+    .price table { font-size: 13px; }
+    .price th, .price td { padding: 12px 2px; }
+    .price th:first-child { width: 22%; }
+    .price ul { font-size: 14px; }
+
+    #area5 { padding: 40px 0; }
+    .book { display: block; padding-bottom: 4em; }
+    .book img { width: 50%; margin: 0 auto; }
+    .book p { padding: 2em 0; }
+    .book a { display: block; width: fit-content; margin: 0 auto; }
+    .profile { flex-direction: column; gap: 30px; }
+    .profile .face { width: 180px; margin: 0; }
+    .profile ul li { margin-bottom: 15px; }
+    .profile .badges img { height: 50px; }
+    .contact-text { margin-top: 20px; }
+    .contact-btn { min-width: 0; width: 100%; }
+
+    footer { height: auto; flex-direction: column-reverse; }
+    footer ul { padding: 20px 0; }
+    footer small { font-size: 14px; padding-bottom: 20px; text-align: center; }
+}
+</style>
+</head>
+<body>
+<header id="header">
+    <h1 class="logo"><a href="#eyecatch"><img src="images/logo.svg" alt="bard vision"></a></h1>
+    <button class="toggle" type="button" aria-label="メニュー" aria-expanded="false"><span></span></button>
+    <ul id="gnav">
+        <li><a href="#eyecatch">TOP</a></li>
+        <li><a href="#area2">WORKS</a></li>
+        <li><a href="#area3">動画レッスン &amp; スクール</a></li>
+        <li><a href="#area2-2">チュートリアル</a></li>
+        <li><a href="#area4">料金</a></li>
+        <li><a href="#area5">お問い合わせ</a></li>
+    </ul>
+</header>
+
+<main>
+    <!-- Hero -->
+    <div id="eyecatch">
+        <video playsinline autoplay muted loop preload="auto" poster="images/hero-poster.webp">
+            <source src="images/hero.mp4" type="video/mp4">
+        </video>
+        <div class="amikake"><img class="copy" src="images/copy.svg" alt="bard vision"></div>
+    </div>
+
+    <!-- 動画制作のパートナー -->
+    <div id="area1">
+        <section class="inner">
+            <h2 class="sec-title">動画制作のパートナー</h2>
+            <div class="cols">
+                <figure><img src="images/about.webp" alt="ビデオカメラ・一眼レフ・編集作業" width="774" height="544" loading="lazy"></figure>
+                <div class="text">
+                    <p>バードビジョンは少数運営の映像制作オフィスです。</p>
+                    <p>情報発信に動画を活用することが一般的になった今、その制作パートナーとして活動しています。</p>
+                    <p>企業プロモーション映像、SNS動画配信、WebCM、インタビュー映像、モーショングラフィックスなど、さまざまな動画制作のかたわら、法人/個人を対象とした映像編集スクールの運営にも力をいれています。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- WORKS -->
+    <div id="area2" class="area2 dark">
+        <section class="inner">
+            <h2 class="sec-title">WORKS</h2>
+            <p>テンプレートによる大量制作を行わず、クライアントが伝えたい事を細かくヒアリングして、ひとつひとつ映像化しています。企業プロモーションや代表インタビューを得意としておりますが、個人による趣味のSNS動画制作も可能です。<br>お気軽にお問い合わせください。</p>
+            <ul class="youtube">
+                <li><figure><div class="yt" data-id="ObzrAh97bso"></div><figcaption><span>【広告PV】道の駅いちかわ<br>トラットリア・アルポンテ</span><a href="https://youtu.be/ObzrAh97bso" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="j4rIoK_qAjo"></div><figcaption><span>【プロモーション】麗大生キャンパスツアー<br>麗澤大学</span><a href="https://youtu.be/j4rIoK_qAjo" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="XR-WjjRU20U"></div><figcaption><span>【プロモーション】WELLBA<br>Y’SACCS公式</span><a href="https://youtu.be/XR-WjjRU20U" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="fNb5Kl3GTlQ"></div><figcaption><span>【TVCM】防災勇士トリプルウィング<br>株式会社シェルタージャパン</span><a href="https://youtu.be/fNb5Kl3GTlQ" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="WsUyrta-V8k"></div><figcaption><span>【周年映像】60th Anniversary<br>株式会社スズキッド</span><a href="https://youtu.be/WsUyrta-V8k" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="cT-2Qw15GPY"></div><figcaption><span>【企業紹介】Delight for all<br>株式会社シカタ</span><a href="https://youtu.be/cT-2Qw15GPY" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="U0k5d88G66k"></div><figcaption><span>【インタビュー】都市養蜂活動<br>同志社大学ミツバチラボ</span><a href="https://youtu.be/U0k5d88G66k" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="u5QlsQkf6XE"></div><figcaption><span>【企業PR】日本の歯並びをきれいに<br>渋谷矯正歯科・キュア矯正歯科グループ</span><a href="https://youtu.be/u5QlsQkf6XE" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="wzgCE4iidtw"></div><figcaption><span>【商品PR】風呂敷専門店 京都むす美<br>山田繊維株式会社</span><a href="https://youtu.be/wzgCE4iidtw" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="5XqQeYch3hk"></div><figcaption><span>【プロモーション】アクアクオリア<br>株式会社 しちだ･ライフ</span><a href="https://youtu.be/5XqQeYch3hk" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="zZg4VRL3MoM"></div><figcaption><span>【インタビュー】副代表 矢野氏<br>NPO法人地域防災推進機構</span><a href="https://youtu.be/zZg4VRL3MoM" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="js9wDPRxNos"></div><figcaption><span>【告知ムービー】朗読ライブ「人魚姫」<br>HAPPY GARDEN</span><a href="https://youtu.be/js9wDPRxNos" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="UUrlGn9GVr8"></div><figcaption><span>【イベント撮影】Ex-CROSS 2023<br>大阪商工会議所</span><a href="https://youtu.be/UUrlGn9GVr8" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="Uuwbdd6KUKs"></div><figcaption><span>【インタビュー】artigiano<br>株式会社ふく江</span><a href="https://youtu.be/Uuwbdd6KUKs" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="eS_dI3FTBVs"></div><figcaption><span>【インタビュー】池畑木工所<br>株式会社アート・宙</span><a href="https://youtu.be/eS_dI3FTBVs" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 動画レッスン & スクール -->
+    <div id="area3">
+        <section class="inner">
+            <div class="desc">
+                <h2 class="sec-title">動画レッスン &amp; スクール</h2>
+                <p>『Premiere Pro』や『After Effects』の操作方法をはじめ、映像編集・デザインに関するマンツーマンレッスンを実施しています。会社の広報やマーケティング担当の方に最適な、スクールでのコースレッスンもご用意しております。<br>ZOOMオンライン、大阪市内の当オフィスにてオフライン、ご都合に合わせて受講いただけます。</p>
+                <figure><img src="images/lesson.webp" alt="映像編集レッスン" width="900" height="500" loading="lazy"></figure>
+                <p class="danraku">少人数(個人レッスン)にて行っているため、ご自身のペースで学ぶことができます。<br>またワークショップ終了後はアフターフォローとして、不明点のご質問も受け付けております。<br>初心者の方も大歓迎です！詳しくは下記リンクをご覧ください。</p>
+            </div>
+            <div class="sem">
+                <figure><img src="images/seminar.webp" alt="レッスン風景" width="900" height="585" loading="lazy"></figure>
+                <ul class="btn-list">
+                    <li><a href="https://www.street-academy.com/myclass/19282?conversion_name=direct_message&amp;tracking_code=a2352dd05e52b6953da45e065653eca1" target="_blank" rel="noopener">Premiere Pro CC 超初心者編</a></li>
+                    <li><a href="https://www.street-academy.com/myclass/22450?conversion_name=direct_message&amp;tracking_code=f7309d8d6b269a460c71c6b93905f52d" target="_blank" rel="noopener">After Effects CC 超初心者編</a></li>
+                    <li><a href="https://www.street-academy.com/myclass/22085?conversion_name=direct_message&amp;tracking_code=f11d625c1ce57292f4be3dc087967f76" target="_blank" rel="noopener">Photoshop CC 超初心者編</a></li>
+                    <li><a href="https://www.street-academy.com/myclass/33892?conversion_name=direct_message&amp;tracking_code=6eca8d67d18cc84e47911d28a961a65c" target="_blank" rel="noopener">Illustrator CC 超初心者編</a></li>
+                </ul>
+            </div>
+            <div class="sem2">
+                <p>映像スクール「Reel Graphics」はコースレッスンを中心としたオンラインスクールです。<br>マンツーマンの学習スタイルで、受講期間や内容などカスタムも可能です。</p>
+                <div class="reel">
+                    <figure><img src="images/office.webp" alt="オフィス" width="1400" height="621" loading="lazy"></figure>
+                    <div class="reel_btn"><a href="https://sites.google.com/view/reelgraphics" target="_blank" rel="noopener">Reel Graphicsオンラインスクール</a></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- チュートリアル -->
+    <div id="area2-2" class="area2 dark">
+        <section class="inner">
+            <h2 class="sec-title">チュートリアル</h2>
+            <p>Adobeの映像系ソフトウェアに関する、操作チュートリアル集です。</p>
+            <ul class="youtube">
+                <li><figure><div class="yt" data-id="6Yb7vNOy-fE"></div><figcaption><span>【PremierePro】ハメ込み合成</span><a href="https://youtu.be/6Yb7vNOy-fE" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="pj9JwYv0C98"></div><figcaption><span>【PremierePro】ローワーサード</span><a href="https://youtu.be/pj9JwYv0C98" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="TASwAl-RVcw"></div><figcaption><span>【PremierePro】タイプライタ</span><a href="https://youtu.be/TASwAl-RVcw" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="dy5M3pcPfcQ"></div><figcaption><span>【AfterEffects】スライドショー</span><a href="https://youtu.be/dy5M3pcPfcQ" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="ooJXbCroMXk"></div><figcaption><span>【AfterEffects】ローワーサード</span><a href="https://youtu.be/ooJXbCroMXk" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="elIOSGdNoN0"></div><figcaption><span>【AfterEffects】テキストアニメーション</span><a href="https://youtu.be/elIOSGdNoN0" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="KP_1UnEwyuM"></div><figcaption><span>【Photoshop】アニメーション</span><a href="https://youtu.be/KP_1UnEwyuM" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="dSbEedy4dcw"></div><figcaption><span>【Photoshop】バニシングポイント</span><a href="https://youtu.be/dSbEedy4dcw" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+                <li><figure><div class="yt" data-id="i8ADWG4Sf6E"></div><figcaption><span>【Photoshop】湯気を描く</span><a href="https://youtu.be/i8ADWG4Sf6E" target="_blank" rel="noopener">&#9656;Youtubeで見る</a></figcaption></figure></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 料金 -->
+    <div id="area4">
+        <section class="inner price">
+            <h2 class="sec-title">料金表（撮影・編集）</h2>
+            <div class="table-wrap">
+                <table>
+                    <tr><th>プラン名</th><th>ライトプラン</th><th>ベーシックプラン</th><th>グランドプラン</th></tr>
+                    <tr><th>料金</th><td>77,000円（税込）</td><td>165,000円（税込）</td><td>330,000円（税込）</td></tr>
+                    <tr><th>動画時間</th><td>3分まで</td><td>5分まで</td><td>10分まで</td></tr>
+                    <tr><th>BGM</th><td colspan="3">フリー1曲</td></tr>
+                    <tr><th>簡易撮影</th><td>なし</td><td>なし</td><td>あり</td></tr>
+                    <tr><th>納品</th><td colspan="3">データ送信（メディア送付は要相談 ※別途費用）</td></tr>
+                    <tr><th>用途例</th><td>個人利用</td><td>商用利用<span>（SNS）</span></td><td>商用利用<span>（HP/LPなど）</span></td></tr>
+                </table>
+            </div>
+            <ul>
+                <li>◆ モーショングラフィックスは別途料金になります。</li>
+                <li>◆ 費用は動画1本制作にかかる概算です。お見積もりにて詳細金額を提示いたします。</li>
+                <li>◆ 必要な画像、動画、音声、テキスト、ロゴ等はお客様のご用意となります。</li>
+                <li>◆ 簡易撮影は別途交通費・人件費が必要となります。</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 書籍・プロフィール・お問い合わせ -->
+    <div id="area5" class="dark">
+        <section class="inner">
+            <h2 class="sec-title">After Effects モーショングラフィックスレシピ</h2>
+            <div class="book">
+                <img src="images/book.webp" width="360" height="512" alt="After Effects 定番パターンで覚えるモーショングラフィックスレシピ" loading="lazy">
+                <p>「After Effectsでモーショングラフィックスを作りたい」と考えている初心者の方に向けた最初の１歩になる書籍です。簡単なアニメーションを制作する手順を学習したい方にオススメです。一度は見たことがある定番アニメーションの表現を50パターン集めました。</p>
+                <a href="https://amzn.to/4iTyktd" target="_blank" rel="noopener">Amazonで購入する &gt;</a>
+            </div>
+        </section>
+        <section class="inner">
+            <h2 class="sec-title">bard vision</h2>
+            <div class="profile">
+                <img class="face" src="images/face.webp" width="250" height="250" alt="代表 藤田 賢三" loading="lazy">
+                <ul>
+                    <li>bard vision [バードビジョン]</li>
+                    <li>動画撮影・編集、ナレーション収録、オンラインレッスン、スクール運営</li>
+                    <li>代表者：藤田 賢三 [Kenzo Fujita]</li>
+                    <li>設立：2016年 6月 1日</li>
+                    <li>Adobe認定プロフェッショナル（ACP）<br>映像音響処理技術者（JPPA）<br>１級音響技術者（SEAS）</li>
+                    <li class="badges">
+                        <img src="images/adobe.webp" alt="Adobe Certified Associate" width="480" height="113">
+                        <a href="https://www.instagram.com/graph_vision_lab/" target="_blank" rel="noopener"><img src="images/insta.webp" alt="Instagram" width="120" height="120"></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="contact-text">バードビジョンへの各種お問い合わせにつきましては、下記よりお願いいたします。<br>メールにて折り返しご連絡させていただきます。</p>
+            <div class="contact-btn-wrap">
+                <a href="mailto:bardvision@gmail.com" class="contact-btn">メールでお問い合わせ</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <small>Copyright &copy; 2016 - 2026 bardvision.com All Rights Reserved.</small>
+    <ul>
+        <li><a href="https://www.facebook.com/kenzofujita1051" target="_blank" rel="noopener"><img src="images/facebook.webp" alt="Facebook" width="160" height="160"></a></li>
+        <li><a href="https://www.street-academy.com/steachers/78204" target="_blank" rel="noopener"><img src="images/streetacademy.webp" alt="ストアカ" width="160" height="160"></a></li>
+    </ul>
+</footer>
+
+<a href="#eyecatch" class="go_top" aria-label="ページトップへ"><img src="images/arrow-top.svg" alt="" width="50" height="50"></a>
+
+<script>
+document.querySelectorAll('.yt').forEach(function (el) {
+    var id = el.dataset.id;
+    var img = document.createElement('img');
+    img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+    img.alt = '';
+    img.loading = 'lazy';
+    el.appendChild(img);
+    el.addEventListener('click', function () {
+        if (el.classList.contains('playing')) return;
+        el.classList.add('playing');
+        el.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+});
+
+var header = document.getElementById('header');
+document.querySelector('.toggle').addEventListener('click', function () {
+    var open = header.classList.toggle('nav-open');
+    this.setAttribute('aria-expanded', open);
+});
+document.querySelectorAll('#gnav a').forEach(function (a) {
+    a.addEventListener('click', function () { header.classList.remove('nav-open'); });
+});
+
+var goTop = document.querySelector('.go_top');
+window.addEventListener('scroll', function () {
+    var h = document.documentElement.scrollHeight;
+    goTop.classList.toggle('show', (h - (window.innerHeight + window.scrollY)) / h <= 0.5);
+}, { passive: true });
+</script>
+</body>
+</html>
