@@ -200,8 +200,14 @@ header {
 .profile .badges img { height: 60px; width: auto; }
 .profile .badges a:hover { opacity: .8; }
 .contact-text { font-size: 16px; margin-top: 40px; }
-.contact-form { width: 60%; margin: 48px auto 0; background: #fff; border-radius: 4px; overflow: hidden; }
-.contact-form iframe { display: block; width: 100%; height: 980px; border: 0; }
+.contact-btn-wrap { text-align: center; margin-top: 48px; }
+.contact-btn {
+    display: inline-block; min-width: 320px;
+    padding: 18px 40px; border-radius: 4px;
+    color: #fff; background: var(--blue); font-size: 17px; letter-spacing: .08em;
+    transition: opacity .2s;
+}
+.contact-btn:hover { opacity: .8; }
 
 /* ---------- Footer ---------- */
 footer {
@@ -291,8 +297,8 @@ footer ul a:hover { opacity: .7; }
     .profile ul li { margin-bottom: 15px; }
     .profile .badges img { height: 50px; }
     .contact-text { margin-top: 20px; }
-    .contact-form { width: 100%; margin-top: 30px; }
-    .contact-form iframe { height: 1080px; }
+    .contact-btn-wrap { margin-top: 30px; }
+    .contact-btn { min-width: 0; width: 100%; }
 
     footer { height: auto; flex-direction: column-reverse; }
     footer ul { padding: 20px 0; }
@@ -461,8 +467,8 @@ footer ul a:hover { opacity: .7; }
                 </ul>
             </div>
             <p class="contact-text">バードビジョンへの各種お問い合わせにつきましては、下記フォームよりお願いいたします。<br>メールにて折り返しご連絡させていただきます。</p>
-            <div class="contact-form">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5i0FzOLQUFMQMNCVoxk7tIm-m6LdS57Eb3QJpAhSIa_PNIQ/viewform?embedded=true" title="お問い合わせフォーム" loading="lazy">読み込んでいます…</iframe>
+            <div class="contact-btn-wrap">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd5i0FzOLQUFMQMNCVoxk7tIm-m6LdS57Eb3QJpAhSIa_PNIQ/viewform" class="contact-btn" target="_blank" rel="noopener">お問い合わせフォームへ</a>
             </div>
         </section>
     </div>
