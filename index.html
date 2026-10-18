@@ -161,7 +161,8 @@ header {
 
 /* ---------- Price ---------- */
 #area4 { padding: 100px 0 40px; }
-.price table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.price table { width: 100%; border-collapse: collapse; margin-bottom: 20px; table-layout: fixed; }
+.price tr:first-child th:first-child { width: 16%; }
 .price th, .price td { border: 1px solid #ccc; text-align: center; background: #fff; padding: 20px 4px; }
 .price th { background: var(--black); color: #fff; font-weight: 400; }
 .price tr:first-child th:nth-child(2) { background: #f8f8f8; color: var(--text); }
@@ -170,6 +171,7 @@ header {
 .price td:nth-child(4) { background: #f8f8f8; }
 .price td[colspan] { background: #fff; }
 .price td span { display: inline-block; }
+.price th .tax { font-size: 12px; }
 .price ul { margin-top: 20px; }
 .table-wrap { overflow-x: auto; }
 
@@ -290,7 +292,7 @@ footer small { font-size: 16px; text-align: center; }
     #area4 { padding: 40px 0; }
     .price table { font-size: 13px; }
     .price th, .price td { padding: 12px 2px; }
-    .price th:first-child { width: 22%; }
+    .price tr:first-child th:first-child { width: 22%; }
     .price ul { font-size: 14px; }
 
     #area-book { padding: 40px 0 0; }
@@ -402,8 +404,8 @@ footer small { font-size: 16px; text-align: center; }
             <div class="table-wrap">
                 <table>
                     <tr><th>プラン名</th><th>ライト</th><th>ベーシック</th><th>グランド</th></tr>
-                    <tr><th>料金</th><td>99,000円（税込）</td><td>165,000円（税込）</td><td>330,000円（税込）</td></tr>
-                    <tr><th>動画時間</th><td>3分まで</td><td>5分まで</td><td>10分まで</td></tr>
+                    <tr><th>料金<span class="tax">（税込）</span></th><td>99,000円</td><td>165,000円</td><td>330,000円</td></tr>
+                    <tr><th>動画時間</th><td>2分まで</td><td>5分まで</td><td>要相談</td></tr>
                     <tr><th>BGM</th><td colspan="3">フリー1曲</td></tr>
                     <tr><th>簡易撮影</th><td>なし</td><td>なし</td><td>あり</td></tr>
                     <tr><th>納品</th><td colspan="3">データ送信（メディア送付は要相談 ※別途費用）</td></tr>
