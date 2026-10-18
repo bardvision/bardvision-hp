@@ -130,36 +130,33 @@ header {
 .youtube figcaption a:hover { opacity: .6; }
 
 /* ---------- Lesson & School ---------- */
-#area3 { padding: 100px 0 0; }
+#area3 { padding: 100px 0; }
 #area3 .desc figure { margin: 40px 0; }
 #area3 .desc figure img { margin: 0 auto; width: 100%; max-width: 600px; }
 .danraku { padding-top: 40px; }
 .sem { display: flex; justify-content: space-between; padding-top: 40px; }
 .sem figure { width: 55%; }
 .sem ul { width: 42%; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; }
-.btn-list li, .reel_btn {
+.btn-list li {
     background: #1b4b5c; border: 1px solid rgba(255,255,255,.12); border-left: 10px solid var(--blue);
     font-size: 20px; line-height: 58px;
 }
-.btn-list a, .reel_btn a {
+.btn-list a {
     position: relative; z-index: 0; display: block;
     color: #fff; text-align: center;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9.2'%3E%3Cpolygon points='0,0 8,4.6 0,9.2' fill='%23fff'/%3E%3C/svg%3E") no-repeat right 20px center / 8px auto;
     transition: color .5s;
 }
-.btn-list a::before, .reel_btn a::before {
+.btn-list a::before {
     content: ""; position: absolute; inset: 0; z-index: -1;
     background: var(--blue); transform: scaleX(0); transform-origin: 0 50%;
     transition: transform .5s ease-out;
 }
-.btn-list a:hover, .reel_btn a:hover { color: #fff; }
-.btn-list a:hover::before, .reel_btn a:hover::before {
+.btn-list a:hover { color: #fff; }
+.btn-list a:hover::before {
     transform: scaleX(1);
     transition-timing-function: cubic-bezier(.52, 1.64, .37, .66);
 }
-.sem2 { margin-top: 100px; }
-.reel { padding: 40px 0 100px; }
-.reel_btn { margin-top: 40px; }
 
 /* ---------- Price ---------- */
 #area4 { padding: 100px 0; }
@@ -286,11 +283,8 @@ footer small { font-size: 16px; text-align: center; }
     .sem figure, .sem ul { width: 100%; }
     .sem figure { margin-bottom: 10px; }
     .sem ul { gap: 10px; }
-    .btn-list li, .reel_btn { font-size: 16px; line-height: 48px; }
-    .btn-list a, .reel_btn a { background-position: 97% center; }
-    .sem2 { margin-top: 70px; }
-    .reel { padding: 20px 0 40px; }
-    .reel_btn { margin-top: 20px; }
+    .btn-list li { font-size: 16px; line-height: 48px; }
+    .btn-list a { background-position: 97% center; }
 
     #area4 { padding: 40px 0; }
     .price table { font-size: 13px; }
@@ -441,13 +435,6 @@ footer small { font-size: 16px; text-align: center; }
                     <li><a href="https://www.street-academy.com/myclass/22085?conversion_name=direct_message&amp;tracking_code=f11d625c1ce57292f4be3dc087967f76" target="_blank" rel="noopener">Photoshop 初心者講座</a></li>
                     <li><a href="https://www.street-academy.com/myclass/33892?conversion_name=direct_message&amp;tracking_code=6eca8d67d18cc84e47911d28a961a65c" target="_blank" rel="noopener">Illustrator 初心者講座</a></li>
                 </ul>
-            </div>
-            <div class="sem2">
-                <p>「Reel Graphics」は、コースレッスンを中心としたオンラインの映像講座です。<br>少人数制の学習スタイルで、受講期間や内容のカスタマイズも可能です。</p>
-                <div class="reel">
-                    <figure><img src="images/office.webp" alt="Reel Graphics のオフィス" width="1400" height="621" loading="lazy"></figure>
-                    <div class="reel_btn"><a href="https://sites.google.com/view/reelgraphics" target="_blank" rel="noopener">Reel Graphics オンライン講座</a></div>
-                </div>
             </div>
         </section>
     </div>
