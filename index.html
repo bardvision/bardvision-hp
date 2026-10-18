@@ -191,13 +191,18 @@ header {
 .book a:hover { opacity: .8; }
 .profile { display: flex; align-items: center; gap: 60px; }
 .profile .face { width: 250px; flex: none; margin-left: 30px; border-radius: 50%; }
-.profile ul li {
-    margin-bottom: 20px; padding-left: 20px; line-height: 1.6;
-    background: url("images/arrow-white.svg") no-repeat left center;
+.profile-info { flex: 1; }
+.profile-table { width: 100%; border-collapse: collapse; }
+.profile-table th, .profile-table td {
+    padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.3);
+    text-align: left; vertical-align: top; font-size: 16px; line-height: 1.8;
 }
-.profile ul li.badges { background: none; display: flex; align-items: center; gap: 30px; }
-.profile .badges img { height: 60px; width: auto; }
-.profile .badges a:hover { opacity: .8; }
+.profile-table tr:first-child th, .profile-table tr:first-child td { border-top: 1px solid rgba(255,255,255,.3); }
+.profile-table th { width: 120px; padding-right: 24px; font-weight: 400; color: rgba(255,255,255,.7); white-space: nowrap; }
+.profile-table .cert { display: block; height: 52px; width: auto; margin-top: 14px; }
+.sns { display: flex; align-items: center; gap: 24px; margin-top: 28px; }
+.sns img { height: 44px; width: auto; }
+.sns a:hover { opacity: .8; }
 .contact-text { font-size: 16px; margin-top: 40px; }
 .contact-btn-wrap { text-align: center; margin-top: 48px; }
 .contact-btn {
@@ -293,8 +298,10 @@ footer ul a:hover { opacity: .7; }
     .book a { display: block; width: fit-content; margin: 0 auto; }
     .profile { flex-direction: column; gap: 30px; }
     .profile .face { width: 180px; margin: 0; }
-    .profile ul li { margin-bottom: 15px; }
-    .profile .badges img { height: 50px; }
+    .profile-info { width: 100%; }
+    .profile-table th { width: 84px; padding-right: 12px; }
+    .profile-table th, .profile-table td { padding: 14px 0; font-size: 15px; }
+    .profile-table .cert { height: 44px; }
     .contact-text { margin-top: 20px; }
     .contact-btn-wrap { margin-top: 30px; }
     .contact-btn { min-width: 0; width: 100%; }
@@ -471,17 +478,17 @@ footer ul a:hover { opacity: .7; }
             <h2 class="sec-title">bard vision</h2>
             <div class="profile">
                 <img class="face" src="images/face.webp" width="250" height="250" alt="代表 藤田 賢三" loading="lazy">
-                <ul>
-                    <li>bard vision [バードビジョン]</li>
-                    <li>動画撮影・編集、ナレーション収録、オンラインレッスン、セミナー運営</li>
-                    <li>代表者：藤田 賢三 [Kenzo Fujita]</li>
-                    <li>設立：2016年 6月 1日</li>
-                    <li>Adobe認定プロフェッショナル（ACP）<br>映像音響処理技術者（JPPA）<br>１級音響技術者（SEAS）</li>
-                    <li class="badges">
-                        <img src="images/adobe.webp" alt="Adobe Certified Associate" width="480" height="113">
-                        <a href="https://www.instagram.com/graph_vision_lab/" target="_blank" rel="noopener"><img src="images/insta.webp" alt="Instagram" width="120" height="120"></a>
-                    </li>
-                </ul>
+                <div class="profile-info">
+                    <table class="profile-table">
+                        <tr><th>代表者</th><td>藤田 賢三 [Kenzo Fujita]</td></tr>
+                        <tr><th>設立</th><td>2016年 6月 1日</td></tr>
+                        <tr><th>保有資格</th><td>Adobe認定プロフェッショナル（ACP）<br>映像音響処理技術者（JPPA）<br>１級音響技術者（SEAS）<br>２級カラーマスター（ADEC）<img class="cert" src="images/adobe.webp" alt="Adobe Certified Associate" width="480" height="113"></td></tr>
+                    </table>
+                    <ul class="sns">
+                        <li><a href="https://www.instagram.com/graph_vision_lab/" target="_blank" rel="noopener"><img src="images/insta.webp" alt="Instagram" width="120" height="120"></a></li>
+                        <li><a href="https://www.youtube.com/@graphvision" target="_blank" rel="noopener"><img src="images/youtube.svg" alt="YouTube" width="68" height="48"></a></li>
+                    </ul>
+                </div>
             </div>
             <p class="contact-text">バードビジョンへの各種お問い合わせにつきましては、下記フォームよりお願いいたします。<br>メールにて折り返しご連絡させていただきます。</p>
             <div class="contact-btn-wrap">
